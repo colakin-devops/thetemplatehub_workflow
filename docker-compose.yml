@@ -24,7 +24,6 @@ services:
       - N8N_SMTP_PASS=${SMTP_PASS}
       - N8N_SMTP_SENDER=${SMTP_SENDER}  # Optional: Set sender email
     volumes:
-      - n8n_data:/home/node/.n8n
-volumes:
-  n8n_data:
-    external: true
+      - /mnt/data/templateshub/flow-templateshub/volumes/n8n_data:/home/node/.n8n
+
+volumes: {} 
